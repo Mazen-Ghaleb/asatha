@@ -18,10 +18,10 @@ function App() {
                        <div>
                         <a className="brand" href="/Home">قسطها</a>
                     </div>
-                    <div className="xd">
+                    <div>
                         <input type="text" placeholder="Search..."></input>
                     </div>
-                    <div className="topnav">
+                    <div>
                         <div className="dropdown">
                             <button className="drpbtn">Desktops</button>
                             <div className="dropdown-content">

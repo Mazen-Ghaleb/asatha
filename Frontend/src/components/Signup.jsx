@@ -54,9 +54,9 @@ export default class SignUp extends Component {
 
                 <br/>
 
-                <button type="submit" className="btn btn-primary btn-block">Sign Up</button>
+                <button type="submit" className="Accountbtn">Sign Up</button>
                 <p className="forgot-password text-right">
-                    Already registered <a href="/Login">Sign in?</a>
+                    Already registered <a href="/Login">Login</a> ?
                 </p>
                 </form>
                 </div> 

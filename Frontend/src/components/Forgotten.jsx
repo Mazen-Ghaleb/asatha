@@ -10,17 +10,19 @@ export default class Login extends Component {
 
                 <div className="form-group">
                     <label>Email Address</label>
+                    <br/>
                     <input type="email" className="form-control" placeholder="Email" />
                 </div>
 
                 <div className="form-group">
                     <label>Confirm Email Address</label>
+                    <br/>
                     <input type="email" className="form-control" placeholder="Confirm Email" />
                 </div>
 
                 <br/>
 
-                <button type="submit" className="btn btn-primary btn-block">Send Reset Request</button>
+                <button type="submit" className="Accountbtn">Send Reset Request</button>
                 </form>
                 </div> 
             </div>

@@ -32,7 +32,6 @@ body {
 h4,
 h5,
 h6,
-label,
 span {
   font-weight: 500;
   font-family: 'Fira Sans', sans-serif;
@@ -47,6 +46,9 @@ body,
 }
 
 .auth-wrapper {
+  min-width: 1920px;
+  min-height: 1080px;
+  background-color: gray;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -56,16 +58,12 @@ body,
 .auth-inner {
   width: 450px;
   margin: auto;
+  margin-top: 2.43rem;
   background: #ffffff;
   box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.2);
   padding: 40px 55px 45px 55px;
   border-radius: 15px;
   transition: all 0.3s;
-}
-
-.auth-wrapper .form-control:focus {
-  border-color: #167bff;
-  box-shadow: none;
 }
 
 .auth-wrapper h3 {
@@ -75,7 +73,14 @@ body,
   padding-bottom: 20px;
 }
 
+label {
+  font-weight: 500;
+  font-size: 20px;
+  font-family: 'Fira Sans', sans-serif;
+}
+
 .custom-control-label {
+  font-size: 13px;
   font-weight: 400;
 }
 
@@ -141,7 +146,7 @@ header input {
   float: right;
   padding: 1rem;
   border: none;
-  margin-top: 0;
+  margin-top: 0rem;
   margin-right: 16px;
   font-size: 2rem;
 }
@@ -238,4 +243,24 @@ img.medium {
 
 .pi {
   align-items: center;
+}
+
+.Accountbtn {
+  background-color: #8f77db;
+  color: white;
+  padding: 1rem;
+  font-size: 1rem;
+  border: none;
+}
+
+.form-control {
+  margin: 0.5rem;
+  padding: 0.5rem;
+  width: 27rem;
+}
+
+.form-control:focus {
+  outline: none !important;
+  border: 1px solid blue;
+  box-shadow: 0 0 10px #719ece;
 }

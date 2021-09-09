@@ -1,13 +1,12 @@
 import React, { Component } from "react";
 
-
 export default class Login extends Component {
     render() {
         return (
             <div className="auth-wrapper">
                 <div className="auth-inner">
                 <form>
-                <h3>Sign In</h3>
+                <h3>Login</h3>
 
                 <div className="form-group">
                     <label>Email address or Username</label>
@@ -33,9 +32,9 @@ export default class Login extends Component {
 
                 <br/>
 
-                <button type="submit" className="btn btn-primary btn-block">Submit</button>
+                <button type="submit" className="Accountbtn">Submit</button>
                 <p className="forgot-password text-right">
-                     <a href="/Forgotten"> Forgot password?</a>
+                     <a href="/Forgotten"> Forgot password ?</a>
                 </p>
                 </form>
                 </div> 
