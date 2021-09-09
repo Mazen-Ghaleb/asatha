@@ -1,64 +1,60 @@
 import React from 'react';
-import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
-import './App.css';
 import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
 import Login from "./components/Login";
 import SignUp from "./components/Signup";
 import Forgotten from "./components/Forgotten";
 import Cart from "./components/Cart";
 import Home from "./components/Home";
-import productimg1 from "./images/add-to-basket.svg";
+import Product from "./components/Product";
+import Basket from "./images/add-to-basket.svg";
 
 function App() {
   return (<Router>
-    <div className="App">
+    <div>
     <head>
         <title>Asatha</title>
     </head>
-    <header class="row">
+    <header className="row">
                        <div>
-                        <a class="brand" href="/Home">قسطها</a>
+                        <a className="brand" href="/Home">قسطها</a>
                     </div>
-                    <div class="xd">
+                    <div className="xd">
                         <input type="text" placeholder="Search..."></input>
                     </div>
-                    <div class="topnav">
-                        <div class="dropdown">
-                            <button class="drpbtn">Desktops</button>
-                            <div class="dropdown-content">
+                    <div className="topnav">
+                        <div className="dropdown">
+                            <button className="drpbtn">Desktops</button>
+                            <div className="dropdown-content">
                               {/* <a href="#">link 1</a>
                                 <a href="#">link 2</a>
                                 <a href="#">link 3</a> */}
                             </div>
                         </div>
-                        <div class="dropdown">
-                            <button class="drpbtn">Laptops</button>
+                        <div className="dropdown">
+                            <button className="drpbtn">Laptops</button>
                             
                         </div>
-                        <div class="dropdown">
-                            <button class="drpbtn">Apple </button>
+                        <div className="dropdown">
+                            <button className="drpbtn">Apple </button>
                         </div>
-                        <div class="dropdown">
-                            <button class="drpbtn">Graphics Cards</button>
+                        <div className="dropdown">
+                            <button className="drpbtn">Graphics Cards</button>
                         </div>
-                        <div class="dropdown">
-                            <button class="drpbtn">Accesories</button>
+                        <div className="dropdown">
+                            <button className="drpbtn">Accesories</button>
                         </div>
-                        <div class="dropdown">
-                            <button class="drpbtn">Used</button>
+                        <div className="dropdown">
+                            <button className="drpbtn">Used</button>
                         </div>
                       </div>
                     <div> 
                         <a href="/Cart">
-                            <img class="shpcrt" src={productimg1} alt="" />
+                            <img className="shpcrt" src={Basket} alt="" />
                         </a>
-                        <a class="pi" href="/Login">Login</a>
-                        <a class="pi" href="/SignUp">Sign Up</a>
+                        <a className="pi" href="/Login">Login</a>
+                        <a className="pi" href="/SignUp">Sign Up</a>
                     </div>
                 </header>
-
-      <div className="auth-wrapper">
-        <div className="auth-inner">
           <Switch>
             <Route exact path='/' component={Home} />
             <Route path="/Home" component={Home} />
@@ -66,28 +62,9 @@ function App() {
             <Route path="/SignUp" component={SignUp} />
             <Route path="/Forgotten" component={Forgotten} />
             <Route path="/Cart" component={Cart} />
+            <Route path="/Product" component={Product} />
           </Switch>
-        </div>
-      </div>
-    </div></Router>
+        </div></Router>
   );
 }
-
-
-
-    {/* <nav className="navbar navbar-expand-lg navbar-light fixed-top">
-        <div className="container">
-          <Link className="navbar-brand" to={"/Home"}>قسطها</Link>
-          <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
-            <ul className="navbar-nav ml-auto">
-              <li className="nav-item">
-                <Link className="nav-link" to={"/Login"}>Login</Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link" to={"/SignUp"}>Sign up</Link>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav> */}
 export default App;

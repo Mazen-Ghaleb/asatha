@@ -1,19 +1,34 @@
 @import url('https://fonts.googleapis.com/css?family=Fira+Sans:400,500,600,700,800');
 
-* {
+.html {
+  font-size: 62.5%;
   box-sizing: border-box;
 }
-body {
-  background: #888888 !important;
-  min-height: 100vh;
-  display: flex;
-  font-weight: 400;
-  font-family: 'Fira Sans', sans-serif;
+
+h1 {
+  color: #2e0672;
+  font-size: 1.8rem;
+  padding: 1rem 0;
 }
 
-h1,
-h2,
-h3,
+h2 {
+  color: #8f77db;
+  font-size: 1.6rem;
+  padding: 1rem 0;
+}
+
+h3 {
+  color: #2e0672;
+  font: Segoe UI;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  font-size: 1.6rem;
+  font-family: arial, helvetica;
+}
+
 h4,
 h5,
 h6,
@@ -24,17 +39,11 @@ span {
 }
 
 body,
-html,
 .App,
 #root,
 .auth-wrapper {
   width: 100%;
   height: 100%;
-}
-
-.navbar-light {
-  background-color: #ffffff;
-  box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.2);
 }
 
 .auth-wrapper {
@@ -115,7 +124,7 @@ footer {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  align-items: center;
+  align-items: left;
 }
 
 a {
@@ -229,31 +238,4 @@ img.medium {
 
 .pi {
   align-items: center;
-}
-
-.homebody {
-  margin: 0;
-  height: 100vh;
-  font-size: 1.6rem;
-  font-family: arial, helvetica;
-}
-
-.homeh1 {
-  font-size: 1.8rem;
-  padding: 1rem 0;
-}
-
-.homeh2 {
-  font-size: 1.6rem;
-  padding: 1rem 0;
-}
-
-.homeh3 {
-  color: #2e0672;
-  font: Segoe UI;
-}
-
-.homehtml {
-  font-size: 62.5%;
-  box-sizing: border-box;
 }

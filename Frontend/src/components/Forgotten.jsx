@@ -1,10 +1,11 @@
 import React, { Component } from "react";
 
-
 export default class Login extends Component {
     render() {
         return (
-            <form>
+            <div className="auth-wrapper">
+                <div className="auth-inner">
+                <form>
                 <h3>Forgtten Password</h3>
 
                 <div className="form-group">
@@ -20,7 +21,9 @@ export default class Login extends Component {
                 <br/>
 
                 <button type="submit" className="btn btn-primary btn-block">Send Reset Request</button>
-            </form>
+                </form>
+                </div> 
+            </div>
         );
     }
 }

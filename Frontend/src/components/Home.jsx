@@ -5,10 +5,10 @@ export default class Home extends Component {
     render() {
         return (
            <div>
-    <body className="homebody">
+    <body>
                 <main>
         <ul className="ba">
-          <li><h3 className="homeh3">Best Sellers</h3>
+          <li><h3>Best Sellers</h3>
             <div className="row center">
               <div className="item">
                 <a href="/Product">
@@ -16,7 +16,7 @@ export default class Home extends Component {
                 </a>
                 <div className="item-body">
                   <a href="/Product">
-                    <h2 className="homeh2">Apple IMac (2019) 21.5"</h2>
+                    <h2>Apple IMac (2019) 21.5</h2>
                   </a>
                 </div>
                 <div className="price">21,000 LE</div>
@@ -28,7 +28,7 @@ export default class Home extends Component {
                   </a>
                   <div className="item-body">
                     <a href="/Product">
-                      <h2 className="homeh2">Apple IMac (2019) 21.5"</h2>
+                      <h2>Apple IMac (2019) 21.5</h2>
                     </a>
                   </div>
                   <div className="price">21,000 LE</div>
@@ -40,14 +40,14 @@ export default class Home extends Component {
                     </a>
                     <div className="item-body">
                       <a href="/Product">
-                        <h2 className="homeh2">Apple IMac (2019) 21.5"</h2>
+                        <h2>Apple IMac (2019) 21.5</h2>
                       </a>
                     </div>
                     <div className="price">21,000 LE</div>
                   </div>
                 </div></div></div></li> 
           <li>
-            <h3 className="homeh3">Underrated Products</h3>
+            <h3>Underrated Products</h3>
             <div className="row center">
               <div className="item">
                 <a href="/Product">
@@ -55,7 +55,7 @@ export default class Home extends Component {
                 </a>
                 <div className="item-body">
                   <a href="/Product">
-                    <h2 className="homeh2">Apple IMac (2019) 21.5"</h2>
+                    <h2>Apple IMac (2019) 21.5</h2>
                   </a>
                 </div>
                 <div className="price">21,000 LE</div>
@@ -67,7 +67,7 @@ export default class Home extends Component {
                   </a>
                   <div className="item-body">
                     <a href="/Product">
-                      <h2 className="homeh2">Apple IMac (2019) 21.5"</h2>
+                      <h2>Apple IMac (2019) 21.5</h2>
                     </a>
                   </div>
                   <div className="price">21,000 LE</div>
@@ -79,14 +79,14 @@ export default class Home extends Component {
                     </a>
                     <div className="item-body">
                       <a href="/Product">
-                        <h2 className="homeh2">Apple IMac (2019) 21.5"</h2>
+                        <h2>Apple IMac (2019) 21.5</h2>
                       </a>
                     </div>
                     <div className="price">21,000 LE</div>
                   </div>
                 </div></div></div></li> 
           <li>
-            <h3 className="homeh3">Recent Purchases</h3>
+            <h3>Recent Purchases</h3>
             <div className="row center">
               <div className="item">
                 <a href="/Product">
@@ -94,7 +94,7 @@ export default class Home extends Component {
                 </a>
                 <div className="item-body">
                   <a href="/Product">
-                    <h2 className="homeh2">Apple IMac (2019) 21.5"</h2>
+                    <h2>Apple IMac (2019) 21.5</h2>
                   </a>
                 </div>
                 <div className="price">21,000 LE</div>
@@ -106,7 +106,7 @@ export default class Home extends Component {
                   </a>
                   <div className="item-body">
                     <a href="/Product">
-                      <h2 className="homeh2">Apple IMac (2019) 21.5"</h2>
+                      <h2>Apple IMac (2019) 21.5</h2>
                     </a>
                   </div>
                   <div className="price">21,000 LE</div>
@@ -118,7 +118,7 @@ export default class Home extends Component {
                     </a>
                     <div className="item-body">
                       <a href="/Product">
-                        <h2 className="homeh2">Apple IMac (2019) 21.5"</h2>
+                        <h2>Apple IMac (2019) 21.5</h2>
                       </a>
                     </div>
                     <div className="price">21,000 LE</div>
