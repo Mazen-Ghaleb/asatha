@@ -1,5 +1,6 @@
 // Imports and Requires
 const express = require('express');
+const cors = require('cors');
 const morgan = require('morgan');
 const homeRoutes = require('./routes/homeRoutes');
 const accountRoutes = require('./routes/accountRoutes');
@@ -12,13 +13,18 @@ const app = express();
 // register view engine
 //app.set('view engine', 'ejs');
 
-// Setting server for listening
-app.listen(process.env.PORT || 3000);
+// Setting server for listening 
+app.listen(process.env.PORT || 5000);
 
 // Middleware & static files
 app.use(express.static('public'));
 app.use(express.urlencoded({ extended: true }));
 app.use(morgan('dev'));
+app.use(cors());
+
+app.get("/api", (req, res) => {
+  res.json({ message: "Hello from server!" });
+});
 
 app.get('/', (req, res) => {
     res.redirect('/Home')

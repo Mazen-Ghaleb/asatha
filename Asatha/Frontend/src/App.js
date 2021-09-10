@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect ,useState } from 'react';
 import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
 import Login from "./components/Login";
 import SignUp from "./components/Signup";
@@ -9,12 +9,27 @@ import Product from "./components/Product";
 import Basket from "./images/add-to-basket.svg";
 
 function App() {
+    const [state, setState] = useState([]);
+
+    const getData = async () => {
+        const response = await fetch("/api");
+        const data = await response.json();
+
+        console.log(data);
+
+        setState(data);
+    }
+  
+    useEffect( () => {
+        getData();
+    },[]);
+
   return (<Router>
-    <div>
     <head>
         <title>Asatha</title>
     </head>
     <header className="row">
+    {/* <p>{!data ? "Loading..." : data}</p> */}
                        <div>
                         <a className="brand" href="/Home">قسطها</a>
                     </div>
@@ -63,8 +78,7 @@ function App() {
             <Route path="/Forgotten" component={Forgotten} />
             <Route path="/Cart" component={Cart} />
             <Route path="/Product" component={Product} />
-          </Switch>
-        </div></Router>
+          </Switch></Router>
   );
 }
 export default App;

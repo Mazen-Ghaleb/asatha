@@ -6,15 +6,15 @@ export default class Cart extends Component {
         return (
            <div>
                <header id="site-header">
-    <div class="container">
+    <div className="container">
       <h1>Shopping cart</h1>
     </div>
   </header>
 
-  <div class="container">
+  <div className="container">
 
     <section id="cart"> 
-      <article class="product">
+      <article className="product">
         <header>
 
           <img className="medium" src={productimg1} alt="" />
@@ -23,65 +23,65 @@ export default class Cart extends Component {
 
         </header>
 
-        <div class="content">
+        <div className="content">
 
           <h1>Lorem ipsum</h1>
 
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta, numquam quis perspiciatis ea ad omnis provident laborum dolore in atque.
 
           <div title="You have selected this product to be shipped in the color yellow." class="color yellow"></div>
-          <div class="type small">XXL</div>
+          <div className="type small">XXL</div>
         </div>
 
-        <footer class="content">
-          <span class="qt-minus">-</span>
-          <span class="qt">2</span>
-          <span class="qt-plus">+</span>
+        <footer className="content">
+          <span className="qt-minus">-</span>
+          <span className="qt">2</span>
+          <span className="qt-plus">+</span>
 
-          <h2 class="full-price">
+          <h2 className="full-price">
             29.98€
           </h2>
 
-          <h2 class="price">
+          <h2 className="price">
             14.99€
           </h2>
         </footer>
       </article>
 
-      <article class="product">
+      <article className="product">
         <header>
           <img className="medium" src={productimg1} alt="" />
             <h3>Remove product</h3>
 
         </header>
 
-        <div class="content">
+        <div className="content">
 
           <h1>Lorem ipsum dolor</h1>
 
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta, numquam quis perspiciatis ea ad omnis provident laborum dolore in atque.
 
-          <div class="color red"></div>
-          <div class="type small">Small</div>
+          <div className="color red"></div>
+          <div className="type small">Small</div>
         </div>
 
-        <footer class="content">
+        <footer className="content">
           
-          <span class="qt-minus">-</span>
-          <span class="qt">1</span>
-          <span class="qt-plus">+</span>
+          <span className="qt-minus">-</span>
+          <span className="qt">1</span>
+          <span className="qt-plus">+</span>
 
-          <h2 class="full-price">
+          <h2 className="full-price">
             79.99€
           </h2>
 
-          <h2 class="price">
+          <h2 className="price">
             79.99€
           </h2>
         </footer>
       </article>
 
-      <article class="product">
+      <article className="product">
         <header>
 
           <img className="medium" src={productimg1} alt="" />
@@ -89,27 +89,27 @@ export default class Cart extends Component {
 
         </header>
 
-        <div class="content">
+        <div className="content">
 
           <h1>Lorem ipsum dolor ipsdu</h1>
 
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta, numquam quis perspiciatis ea ad omnis provident laborum dolore in atque.
 
-          <div class="color blue"></div>
-          <div class="type small">Large</div>
+          <div className="color blue"></div>
+          <div className="type small">Large</div>
         </div>
 
-        <footer class="content">
+        <footer className="content">
           
-          <span class="qt-minus">-</span>
-          <span class="qt">3</span>
-          <span class="qt-plus">+</span>
+          <span className="qt-minus">-</span>
+          <span className="qt">3</span>
+          <span className="qt-plus">+</span>
 
-          <h2 class="full-price">
+          <h2 className="full-price">
             53.99€
           </h2>
 
-          <h2 class="price">
+          <h2 className="price">
             17.99€
           </h2>
         </footer>

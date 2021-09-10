@@ -129,7 +129,7 @@ export default class Home extends Component {
           </li> 
         </ul>
       </main>
-      <footer class="row center">  placeholder text                </footer>
+      <footer className="row center">  placeholder text                </footer>
     </body>
            </div>
         );
