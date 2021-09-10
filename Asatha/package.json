@@ -9,7 +9,7 @@
   "version": "1.0.0",
   "main": "app.js",
   "scripts": {
-    "server": "node index.js",
+    "server": "nodemon index.js",
     "frontend": "npm start --prefix frontend",
     "start": "concurrently \"npm run server\" \"npm run frontend\""
   },
