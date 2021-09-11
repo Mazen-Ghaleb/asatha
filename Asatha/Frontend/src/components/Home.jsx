@@ -9,8 +9,6 @@ const Home = ({productName}) =>{
           <ul className="ba">
             <li><h3>Best Sellers</h3>
             <ProductItem productName={productName} price={21000}/>
-            <ProductItem productName={productName} price={21000}/>
-            <ProductItem productName={productName} price={21000}/>
               <h3>Underrated Products</h3>
               <div className="row center">
                 <div className="item">
@@ -19,10 +17,10 @@ const Home = ({productName}) =>{
                   </a>
                   <div className="item-body">
                     <a href="/Product">
-                      <h2>Apple IMac (2019) 21.5</h2>
+                      <h2>productname[2]</h2>
                     </a>
                   </div>
-                  <div className="price">21,000 LE</div>
+                  <div className="price">productprice[2]LE</div>
                 </div>
                 <div className="row center">
                   <div className="item">

@@ -9,7 +9,7 @@ import Product from "./components/Product";
 import Basket from "./images/add-to-basket.svg";
 
 function App() {
-    const [productName, setProductName] = useState("hallo");
+    const [productName, setProductName] = useState("hallo!");
 
     const getData = async () => {
         const response = await fetch("home");
@@ -17,7 +17,6 @@ function App() {
         console.log(data);
         setProductName(data.message);
     }
-  
     useEffect( () => {
         getData();
     },[]);
@@ -68,14 +67,15 @@ function App() {
                         <a className="pi" href="/SignUp">Sign Up</a>
                     </div>
                 </header>
+
           <Switch>
             <Route exact path='/' component={Home} />
             <Route path="/Home" component={()=><Home productName={productName}/>} />
-            <Route path="/Login" component={Login} />
-            <Route path="/SignUp" component={SignUp} />
-            <Route path="/Forgotten" component={Forgotten} />
-            <Route path="/Cart" component={Cart} />
-            <Route path="/Product" component={Product} />
+            <Route path="/Login" component={()=><Login productName={productName}/>} />
+            <Route path="/SignUp" component={()=><SignUp productName={productName}/>} />
+            <Route path="/Forgotten" component={<Forgotten productName={productName}/>} />
+            <Route path="/Cart" component={()=><Cart productName={productName}/>} />
+            <Route path="/Product" component={()=><Product productName={productName}/>} />
           </Switch></Router>
   );
 }
