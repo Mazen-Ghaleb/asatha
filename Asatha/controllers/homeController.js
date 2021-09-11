@@ -2,8 +2,7 @@
 
 // home functions
 const view_home = (request, response) =>{
-    response.write('this is home page');
-    response.send();
+    response.json({ message: "Hello from server! this is kareem" })
 }
 
 module.exports ={

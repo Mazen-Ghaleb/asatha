@@ -9,15 +9,13 @@ import Product from "./components/Product";
 import Basket from "./images/add-to-basket.svg";
 
 function App() {
-    const [state, setState] = useState([]);
+    const [productName, setProductName] = useState("hallo");
 
     const getData = async () => {
-        const response = await fetch("/api");
+        const response = await fetch("home");
         const data = await response.json();
-
         console.log(data);
-
-        setState(data);
+        setProductName(data.message);
     }
   
     useEffect( () => {
@@ -72,7 +70,7 @@ function App() {
                 </header>
           <Switch>
             <Route exact path='/' component={Home} />
-            <Route path="/Home" component={Home} />
+            <Route path="/Home" component={()=><Home productName={productName}/>} />
             <Route path="/Login" component={Login} />
             <Route path="/SignUp" component={SignUp} />
             <Route path="/Forgotten" component={Forgotten} />
