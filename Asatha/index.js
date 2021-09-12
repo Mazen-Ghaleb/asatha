@@ -1,4 +1,6 @@
 // Imports and Requires
+const db = require('./data');
+const mysql = require ('mysql');
 const express = require('express');
 const cors = require('cors');
 const morgan = require('morgan');
@@ -22,6 +24,22 @@ app.use(express.urlencoded({ extended: true }));
 app.use(morgan('dev'));
 app.use(cors());
 
+app.get('/Home', function(req,resp){
+  const id = db.query('select * from tabletest');
+  console.log(id);
+  //console.log(pool);
+  /*pool.query('select * from tabletest' , (err,rows) => {
+      if(err){
+          console.log("Err in Q");
+      }
+      else {
+      console.log(rows[0]);
+      resp.status(200).send(rows[0]);
+      //resp.json({ message2: "this is the message from db.js" })
+  }
+})*/
+})
+/*
 app.get("/api", (req, res) => {
   res.json({ message: "Hello from server!" });
 });
@@ -32,7 +50,7 @@ app.get('/', (req, res) => {
 
 // to use the Home routes
 app.use('/Home', homeRoutes);
-
+*/
 // to use the product routes
 app.use('/Product/:id', productRoutes);
 

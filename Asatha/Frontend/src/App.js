@@ -10,16 +10,33 @@ import Basket from "./images/add-to-basket.svg";
 
 function App() {
     const [productName, setProductName] = useState("hallo!");
-
+/*
     const getData = async () => {
         const response = await fetch("home");
         const data = await response.json();
-        console.log(data);
+        //console.log(data);
         setProductName(data.message);
+        //console.log(productName);
     }
     useEffect( () => {
         getData();
     },[]);
+*/
+    console.log(productName);
+    const [dbm, setdbMessage] = useState("db initial state");
+
+    const getDB = async () => {
+        const response2 = await fetch("home");
+        const data2 = await response2.json();
+        //console.log(data);
+        setdbMessage(data2.message);
+        //console.log(databaseMessage);
+    }
+    useEffect( () => {
+        getDB();
+    },[]);
+
+    console.log(dbm);
 
   return (<Router>
     <head>
