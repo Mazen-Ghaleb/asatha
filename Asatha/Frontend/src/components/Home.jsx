@@ -7,9 +7,63 @@ export default class Home extends Component {
            <div>
     <body>
                 <main>
-        <ul className="ba">
-          <li><h3>Best Sellers</h3>
-            <div className="row center">
+        {/* <ul className="ba">
+          <li> */}
+          <h3>Best Sellers</h3>
+          <div class="row">
+
+              <div className=" col-lg-3 col-md-4 col-sm-6">
+                <a href="/Product">
+                  <img className="medium" src={productimg1} alt="" />
+                </a>
+                <div className="item-body">
+                  <a href="/Product">
+                    <h2>Apple IMac (2019) 21.5</h2>
+                  </a>
+                </div>
+                <div className="price">21,000 LE</div>
+              </div>
+
+              <div className=" col-lg-3 col-md-4 col-sm-6">
+                <a href="/Product">
+                  <img className="medium" src={productimg1} alt="" />
+                </a>
+                <div className="item-body">
+                  <a href="/Product">
+                    <h2>Apple IMac (2019) 21.5</h2>
+                  </a>
+                </div>
+                <div className="price">21,000 LE</div>
+              </div>
+
+              <div className=" col-lg-3 col-md-4 col-sm-6">
+                <a href="/Product">
+                  <img className="medium" src={productimg1} alt="" />
+                </a>
+                <div className="item-body">
+                  <a href="/Product">
+                    <h2>Apple IMac (2019) 21.5</h2>
+                  </a>
+                </div>
+                <div className="price">21,000 LE</div>
+              </div>
+
+              <div className=" col-lg-3 col-md-4 col-sm-6">
+                <a href="/Product">
+                  <img className="medium" src={productimg1} alt="" />
+                </a>
+                <div className="item-body">
+                  <a href="/Product">
+                    <h2>Apple IMac (2019) 21.5</h2>
+                  </a>
+                </div>
+                <div className="price">21,000 LE</div>
+              </div>
+          </div>
+
+
+          {/* ******************************************************************************************************* */}
+            {/* <div className="r1 center">
               <div className="item">
                 <a href="/Product">
                   <img className="medium" src={productimg1} alt="" />
@@ -21,7 +75,7 @@ export default class Home extends Component {
                 </div>
                 <div className="price">21,000 LE</div>
               </div>
-              <div className="row center">
+              <div className="r1 center">
                 <div className="item">
                   <a href="/Product">
                     <img className="medium" src={productimg1} alt="" />
@@ -33,7 +87,7 @@ export default class Home extends Component {
                   </div>
                   <div className="price">21,000 LE</div>
                 </div>
-                <div className="row center">
+                <div className="r1 center">
                   <div className="item">
                     <a href="/Product">
                       <img className="medium" src={productimg1}  alt="" />
@@ -45,10 +99,67 @@ export default class Home extends Component {
                     </div>
                     <div className="price">21,000 LE</div>
                   </div>
-                </div></div></div></li> 
-          <li>
+        </div></div></div></li>*/}
+          {/* <li> */}
+      {/* ******************************************************************************************************* */}
+
             <h3>Underrated Products</h3>
-            <div className="row center">
+
+            <div class="row">
+
+              <div className=" col-lg-3 col-md-4 col-sm-6">
+                <a href="/Product">
+                  <img className="medium" src={productimg1} alt="" />
+                </a>
+                <div className="item-body">
+                  <a href="/Product">
+                    <h2>Apple IMac (2019) 21.5</h2>
+                  </a>
+                </div>
+                <div className="price">21,000 LE</div>
+              </div>
+
+              <div className=" col-lg-3 col-md-4 col-sm-6">
+                <a href="/Product">
+                  <img className="medium" src={productimg1} alt="" />
+                </a>
+                <div className="item-body">
+                  <a href="/Product">
+                    <h2>Apple IMac (2019) 21.5</h2>
+                  </a>
+                </div>
+                <div className="price">21,000 LE</div>
+              </div>
+
+              <div className=" col-lg-3 col-md-4 col-sm-6">
+                <a href="/Product">
+                  <img className="medium" src={productimg1} alt="" />
+                </a>
+                <div className="item-body">
+                  <a href="/Product">
+                    <h2>Apple IMac (2019) 21.5</h2>
+                  </a>
+                </div>
+                <div className="price">21,000 LE</div>
+              </div>
+
+              <div className=" col-lg-3 col-md-4 col-sm-6">
+                <a href="/Product">
+                  <img className="medium" src={productimg1} alt="" />
+                </a>
+                <div className="item-body">
+                  <a href="/Product">
+                    <h2>Apple IMac (2019) 21.5</h2>
+                  </a>
+                </div>
+                <div className="price">21,000 LE</div>
+              </div>
+          </div>
+
+          {/* ******************************************************************************************************* */}
+
+
+           {/* <div className="r1 center">
               <div className="item">
                 <a href="/Product">
                   <img className="medium" src={productimg1}  alt="" />
@@ -60,7 +171,7 @@ export default class Home extends Component {
                 </div>
                 <div className="price">21,000 LE</div>
               </div>
-              <div className="row center">
+              <div className="r1 center">
                 <div className="item">
                   <a href="/Product">
                     <img className="medium" src={productimg1} alt="" />
@@ -72,7 +183,7 @@ export default class Home extends Component {
                   </div>
                   <div className="price">21,000 LE</div>
                 </div>
-                <div className="row center">
+                <div className="r1 center">
                   <div className="item">
                     <a href="/Product">
                       <img className="medium" src={productimg1} alt="" />
@@ -84,10 +195,64 @@ export default class Home extends Component {
                     </div>
                     <div className="price">21,000 LE</div>
                   </div>
-                </div></div></div></li> 
-          <li>
+                 </div></div></div></li>  */}
+          {/* <li> */}
             <h3>Recent Purchases</h3>
-            <div className="row center">
+
+          {/* ******************************************************************************************************* */}
+          <div class="row">
+
+              <div className=" col-lg-3 col-md-4 col-sm-6">
+                <a href="/Product">
+                  <img className="medium" src={productimg1} alt="" />
+                </a>
+                <div className="item-body">
+                  <a href="/Product">
+                    <h2>Apple IMac (2019) 21.5</h2>
+                  </a>
+                </div>
+                <div className="price">21,000 LE</div>
+              </div>
+
+              <div className=" col-lg-3 col-md-4 col-sm-6">
+                <a href="/Product">
+                  <img className="medium" src={productimg1} alt="" />
+                </a>
+                <div className="item-body">
+                  <a href="/Product">
+                    <h2>Apple IMac (2019) 21.5</h2>
+                  </a>
+                </div>
+                <div className="price">21,000 LE</div>
+              </div>
+
+              <div className=" col-lg-3 col-md-4 col-sm-6">
+                <a href="/Product">
+                  <img className="medium" src={productimg1} alt="" />
+                </a>
+                <div className="item-body">
+                  <a href="/Product">
+                    <h2>Apple IMac (2019) 21.5</h2>
+                  </a>
+                </div>
+                <div className="price">21,000 LE</div>
+              </div>
+
+              <div className=" col-lg-3 col-md-4 col-sm-6">
+                <a href="/Product">
+                  <img className="medium" src={productimg1} alt="" />
+                </a>
+                <div className="item-body">
+                  <a href="/Product">
+                    <h2>Apple IMac (2019) 21.5</h2>
+                  </a>
+                </div>
+                <div className="price">21,000 LE</div>
+              </div>
+          </div>
+          {/* ******************************************************************************************************* */}
+
+            {/*<div className="r1 center">
               <div className="item">
                 <a href="/Product">
                   <img className="medium" src={productimg1} alt="" />
@@ -99,7 +264,7 @@ export default class Home extends Component {
                 </div>
                 <div className="price">21,000 LE</div>
               </div>
-              <div className="row center">
+              <div className="r1 center">
                 <div className="item">
                   <a href="/Product">
                     <img className="medium" src={productimg1} alt="" />
@@ -111,7 +276,7 @@ export default class Home extends Component {
                   </div>
                   <div className="price">21,000 LE</div>
                 </div>
-                <div className="row center">
+                <div className="r1 center">
                   <div className="item">
                     <a href="/Product">
                       <img className="medium" src={productimg1} alt="" />
@@ -126,10 +291,10 @@ export default class Home extends Component {
                 </div>
               </div>
             </div>
-          </li> 
-        </ul>
+           </li>  */}
+        {/* </ul> */}
       </main>
-      <footer className="row center">  placeholder text                </footer>
+      <footer className="r1 center">  placeholder text                </footer>
     </body>
            </div>
         );
