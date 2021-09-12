@@ -29,7 +29,7 @@ function App() {
     <head>
         <title>Asatha</title>
     </head>
-    <header className="row">
+    <header className="r1">
 
         {/* dynamic navbar attempt */}
        <Navbar ></Navbar>
