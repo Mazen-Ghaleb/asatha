@@ -29,18 +29,13 @@ function App() {
   useEffect(() => {
     getData();
   }, []);
-  return (<Router>
-    <head>
-        <title>Asatha</title>
-    </head>
-    <header className="r1">
 
   return (
     <Router>
       <head>
         <title>Asatha</title>
       </head>
-      <header className="row">
+      <header className="r1">
         {/* dynamic navbar attempt */}
         <Navbar></Navbar>
 
