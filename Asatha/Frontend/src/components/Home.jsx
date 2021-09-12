@@ -9,7 +9,7 @@ export default class Home extends Component {
                 <main>
         <ul className="ba">
           <li><h3>Best Sellers</h3>
-            <div className="row center">
+            <div className="r1 center">
               <div className="item">
                 <a href="/Product">
                   <img className="medium" src={productimg1} alt="" />
@@ -21,7 +21,7 @@ export default class Home extends Component {
                 </div>
                 <div className="price">21,000 LE</div>
               </div>
-              <div className="row center">
+              <div className="r1 center">
                 <div className="item">
                   <a href="/Product">
                     <img className="medium" src={productimg1} alt="" />
@@ -33,7 +33,7 @@ export default class Home extends Component {
                   </div>
                   <div className="price">21,000 LE</div>
                 </div>
-                <div className="row center">
+                <div className="r1 center">
                   <div className="item">
                     <a href="/Product">
                       <img className="medium" src={productimg1}  alt="" />
@@ -48,7 +48,7 @@ export default class Home extends Component {
                 </div></div></div></li> 
           <li>
             <h3>Underrated Products</h3>
-            <div className="row center">
+            <div className="r1 center">
               <div className="item">
                 <a href="/Product">
                   <img className="medium" src={productimg1}  alt="" />
@@ -60,7 +60,7 @@ export default class Home extends Component {
                 </div>
                 <div className="price">21,000 LE</div>
               </div>
-              <div className="row center">
+              <div className="r1 center">
                 <div className="item">
                   <a href="/Product">
                     <img className="medium" src={productimg1} alt="" />
@@ -72,7 +72,7 @@ export default class Home extends Component {
                   </div>
                   <div className="price">21,000 LE</div>
                 </div>
-                <div className="row center">
+                <div className="r1 center">
                   <div className="item">
                     <a href="/Product">
                       <img className="medium" src={productimg1} alt="" />
@@ -87,7 +87,7 @@ export default class Home extends Component {
                 </div></div></div></li> 
           <li>
             <h3>Recent Purchases</h3>
-            <div className="row center">
+            <div className="r1 center">
               <div className="item">
                 <a href="/Product">
                   <img className="medium" src={productimg1} alt="" />
@@ -99,7 +99,7 @@ export default class Home extends Component {
                 </div>
                 <div className="price">21,000 LE</div>
               </div>
-              <div className="row center">
+              <div className="r1 center">
                 <div className="item">
                   <a href="/Product">
                     <img className="medium" src={productimg1} alt="" />
@@ -111,7 +111,7 @@ export default class Home extends Component {
                   </div>
                   <div className="price">21,000 LE</div>
                 </div>
-                <div className="row center">
+                <div className="r1 center">
                   <div className="item">
                     <a href="/Product">
                       <img className="medium" src={productimg1} alt="" />
@@ -129,7 +129,7 @@ export default class Home extends Component {
           </li> 
         </ul>
       </main>
-      <footer className="row center">  placeholder text                </footer>
+      <footer className="r1 center">  placeholder text                </footer>
     </body>
            </div>
         );
