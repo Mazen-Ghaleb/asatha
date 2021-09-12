@@ -9,6 +9,9 @@ export default class Home extends Component {
                 <main>
         <ul className="ba">
           <li><h3>Best Sellers</h3>
+          <div class="row">
+            
+          </div>
             <div className="r1 center">
               <div className="item">
                 <a href="/Product">
