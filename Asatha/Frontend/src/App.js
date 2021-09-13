@@ -36,60 +36,19 @@ function App() {
         <title>Asatha</title>
       </head>
       <header className="r1">
-        {/* dynamic navbar attempt */}
         <Navbar></Navbar>
-
-        {/* dynamic navbar attempt */}
-
-        {/* <p>{!data ? "Loading..." : data}</p> */}
-        {/* <div>
-                        {/* <a className="brand" href="/Home">قسطها</a>
-                    </div>
-                    <div>
-                        <input type="text" placeholder="Search..."></input>
-                    </div>
-                    <div>
-                        <div className="dropdown">
-                            <button className="drpbtn">Desktops</button>
-                            <div className="dropdown-content">
-                              {/* <a href="#">link 1</a>
-                                <a href="#">link 2</a>
-                                <a href="#">link 3</a> */}
-        {/* </div>
-                        </div>
-                        <div className="dropdown">
-                            <button className="drpbtn">Laptops</button>
-                            
-                        </div>
-                        <div className="dropdown">
-                            <button className="drpbtn">Apple </button>
-                        </div>
-                        <div className="dropdown">
-                            <button className="drpbtn">Graphics Cards</button>
-                        </div>
-                        <div className="dropdown">
-                            <button className="drpbtn">Accesories</button>
-                        </div>
-                        <div className="dropdown">
-                            <button className="drpbtn">Used</button>
-                        </div>
-                      </div>
-                    <div> 
-                        <a href="/Cart">
-                            <img className="shpcrt" src={Basket} alt="" />
-                        </a>
-                        <a className="pi" href="/Login">Login</a>
-                        <a className="pi" href="/SignUp">Sign Up</a>
-                    </div>  */}
       </header>
       <Switch>
-        <Route exact path="/" component={Home} />
-        <Route path="/Home" component={Home} />
-        <Route path="/Login" component={Login} />
-        <Route path="/SignUp" component={SignUp} />
-        <Route path="/Forgotten" component={Forgotten} />
-        <Route path="/Cart" component={Cart} />
-        <Route path="/Product" component={Product} />
+        <Route exact path="/" component={() => <Home state={state} />} />
+        <Route path="/Home" component={() => <Home state={state} />} />
+        <Route path="/Login" component={() => <Login state={state} />} />
+        <Route path="/SignUp" component={() => <SignUp state={state} />} />
+        <Route
+          path="/Forgotten"
+          component={() => <Forgotten state={state} />}
+        />
+        <Route path="/Cart" component={() => <Cart state={state} />} />
+        <Route path="/Product" component={() => <Product state={state} />} />
       </Switch>
     </Router>
   );
