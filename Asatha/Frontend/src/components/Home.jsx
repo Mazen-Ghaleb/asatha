@@ -3,9 +3,9 @@ import productimg1 from '../images/product-1.jpg';
 
 function getProductInfos(props) {
   if (props) {
-    if (props.state && props.state.customer) {
+    if (props.state && props.state.product) {
       // use JSON.Parse to print single attribute without quotations.
-      return JSON.stringify(props.state.customer[0].FName, null, 2);
+      return JSON.stringify(props.state.product, null, 2);
     }
   }
 }
@@ -16,8 +16,8 @@ export default class Home extends Component {
       <div>
         <body>
           {/* <div>
-                <pre>{getProductInfos(this.props)}</pre>
-              </div> */}
+            <pre>{getProductInfos(this.props)}</pre>
+          </div> */}
           <main>
             <h3>Best Sellers</h3>
             <div class="row">

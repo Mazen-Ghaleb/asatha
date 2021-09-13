@@ -3,7 +3,7 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  NavLink,
+  Redirect,
 } from 'react-router-dom';
 import Login from './components/Login';
 import SignUp from './components/Signup';
@@ -15,19 +15,25 @@ import Basket from './images/add-to-basket.svg';
 import Navbar from './components/navbar';
 
 function App() {
-  const [state, setState] = useState([]);
+  const [customer, setCustomer] = useState([]);
+  const [supplier, setSupplier] = useState([]);
+  const [product, setProduct] = useState([]);
+  const [order, setOrder] = useState([]);
+  const [orderItem, setOrderItem] = useState([]);
 
-  const getData = async () => {
-    const response = await fetch('/api/customerInfo');
+  async function getData(Info, InfoType, InfoFunction) {
+    const response = await fetch('/api/' + Info);
     const data = await response.json();
 
-    console.log(data);
-
-    setState(data);
-  };
+    InfoFunction(data);
+  }
 
   useEffect(() => {
-    getData();
+    getData('customerInfo', customer, setCustomer);
+    getData('supplierInfo', supplier, setProduct);
+    getData('productInfo', product, setProduct);
+    getData('orderInfo', order, setOrder);
+    getData('orderItemInfo', orderItem, setOrderItem);
   }, []);
 
   return (
@@ -39,16 +45,23 @@ function App() {
         <Navbar></Navbar>
       </header>
       <Switch>
-        <Route exact path="/" component={() => <Home state={state} />} />
-        <Route path="/Home" component={() => <Home state={state} />} />
-        <Route path="/Login" component={() => <Login state={state} />} />
-        <Route path="/SignUp" component={() => <SignUp state={state} />} />
+        <Route exact path="/">
+          <Redirect to="/Home" />
+        </Route>
+        <Route path="/Home" component={() => <Home state={product} />} />
+        <Route path="/Login" component={() => <Login state={customer} />} />
+        <Route path="/SignUp" component={() => <SignUp state={customer} />} />
         <Route
           path="/Forgotten"
-          component={() => <Forgotten state={state} />}
+          component={() => <Forgotten state={customer} />}
         />
-        <Route path="/Cart" component={() => <Cart state={state} />} />
-        <Route path="/Product" component={() => <Product state={state} />} />
+        <Route
+          path="/Cart"
+          component={() => (
+            <Cart state={product} state2={order} state3={orderItem} />
+          )}
+        />
+        <Route path="/Product" component={() => <Product state={product} />} />
       </Switch>
     </Router>
   );

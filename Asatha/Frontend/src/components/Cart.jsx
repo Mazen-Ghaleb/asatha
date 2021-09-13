@@ -3,9 +3,25 @@ import productimg1 from '../images/product-1.jpg';
 
 function getProductInfos(props) {
   if (props) {
-    if (props.state && props.state.customer) {
+    if (props.state && props.state.product) {
       // use JSON.Parse to print single attribute without quotations.
-      return JSON.stringify(props.state.customer[0].FName, null, 2);
+      return JSON.stringify(props.state.product, null, 2);
+    }
+  }
+}
+function getOrderInfos(props) {
+  if (props) {
+    if (props.state2 && props.state2.order) {
+      // use JSON.Parse to print single attribute without quotations.
+      return JSON.stringify(props.state2.order, null, 2);
+    }
+  }
+}
+function getOrderItemInfos(props) {
+  if (props) {
+    if (props.state3 && props.state3.orderItem) {
+      // use JSON.Parse to print single attribute without quotations.
+      return JSON.stringify(props.state3.orderItem, null, 2);
     }
   }
 }
@@ -15,8 +31,8 @@ export default class Cart extends Component {
     return (
       <html class="cart-html">
         {/* <div>
-                <pre>{getProductInfos(this.props)}</pre>
-              </div> */}
+          <pre>{getProductInfos(this.props)}</pre>
+        </div> */}
         <div>
           <header id="cart-site-header">
             <div className="cart-container">
