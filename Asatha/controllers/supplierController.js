@@ -3,14 +3,14 @@ const connection = require('../dbConnection');
 
 const get_supplierInfo = (req, res) => {
   var supplierInfo = {
-    product: [],
+    supplier: [],
   };
   connection.query('SELECT * FROM `supplier`', function (err, rows) {
     if (err) {
       throw err;
     } else {
       for (i = 0; i < rows.length; i++) {
-        supplierInfo.product.push({
+        supplierInfo.supplier.push({
           SupplierID: rows[i].SupplierID,
           CompanyName: rows[i].CompanyName,
           Phone: rows[i].Phone,
