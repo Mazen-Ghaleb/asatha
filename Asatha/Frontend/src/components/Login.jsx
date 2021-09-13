@@ -8,7 +8,7 @@ const Login = ({productName})=> {
             <h3>Login</h3>
 
             <div className="form-group">
-                <label>Email address or Username</label>
+                <label>{productName}</label>
                 <br/>
                 <input type="email" className="form-control" placeholder="Email or Username" />
                 <br/>

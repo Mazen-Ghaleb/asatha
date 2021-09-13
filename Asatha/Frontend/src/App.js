@@ -15,7 +15,7 @@ function App() {
         const response = await fetch("home");
         const data = await response.json();
         console.log(data);
-        setProductName(data.message);
+        setProductName(data);
     }
     useEffect( () => {
         getData();
