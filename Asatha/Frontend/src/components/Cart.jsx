@@ -1,10 +1,22 @@
 import React, { Component } from 'react';
 import productimg1 from '../images/product-1.jpg';
 
+function getProductInfos(props) {
+  if (props) {
+    if (props.state && props.state.customer) {
+      // use JSON.Parse to print single attribute without quotations.
+      return JSON.stringify(props.state.customer[0].FName, null, 2);
+    }
+  }
+}
+
 export default class Cart extends Component {
   render() {
     return (
       <html class="cart-html">
+        {/* <div>
+                <pre>{getProductInfos(this.props)}</pre>
+              </div> */}
         <div>
           <header id="cart-site-header">
             <div className="cart-container">
