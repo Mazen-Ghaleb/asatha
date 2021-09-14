@@ -2,7 +2,7 @@
 const express = require('express');
 const cors = require('cors');
 const morgan = require('morgan');
-const connection = require('./dbConnection');
+//const connection = require('./dbConnection');
 const customerRouter = require('./routes/customerRouter');
 const orderRouter = require('./routes/orderRouter');
 const orderItemRouter = require('./routes/orderItemRouter');
@@ -20,7 +20,7 @@ app.use(express.static('public'));
 app.use(express.urlencoded({ extended: true }));
 app.use(morgan('dev'));
 app.use(cors());
-
+/*
 connection.connect((err) => {
   if (err) {
     throw err;
@@ -41,3 +41,4 @@ connection.connect((err) => {
     app.use('/api/supplierInfo', supplierRouter);
   }
 });
+*/

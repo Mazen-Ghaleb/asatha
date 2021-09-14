@@ -1,5 +1,5 @@
 // Imports and Requires
-const mysql = require('mysql');
+/*const mysql = require('mysql');
 const dbCred = require('./dbCredentials');
 
 const connection = mysql.createConnection({
@@ -11,3 +11,4 @@ const connection = mysql.createConnection({
 });
 
 module.exports = connection;
+*/

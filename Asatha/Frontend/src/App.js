@@ -56,10 +56,10 @@ function App() {
         <Navbar></Navbar>
       </header>
       <Switch>
-        <Route exact path="/">
-          <Redirect to="/Home" />
+          {/*<Route exact path="/">
+        <Redirect to="/Home" />
         </Route>
-        <Route path="/Home" component={() => <Home state={product} />} />
+  <Route path="/Home" component={() => <Home state={product} />} />*/}
         <Route path="/Login" component={() => <Login state={customer} />} />
         <Route path="/SignUp" component={() => <SignUp state={customer} />} />
         <Route
