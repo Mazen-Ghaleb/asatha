@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
+import {useAuth} from '../contexts/AuthContext'
 
 export default class SignUp extends Component {
+  
   render() {
     return (
       <div className="auth-wrapper">
