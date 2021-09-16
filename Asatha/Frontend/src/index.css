@@ -114,6 +114,19 @@ label {
   height: 100%;
 }
 
+.row{
+  display:inline;
+}
+
+.itemloop{
+  display: flex;
+  padding: 1rem;
+  border: #000;
+  border-style: dotted;
+  align-items: center;
+  justify-content: center;
+}
+
 main {
   grid-area: main;
   padding: 1rem;
@@ -168,7 +181,7 @@ header a {
 }
 .searchbtn{
   border-radius: 0px 050px 50px 0px; 
-  height: 52px;
+  height: 50px;
   min-height: 32px;
   background-color: white;
   border: none;
@@ -209,6 +222,16 @@ img.medium {
 
 .item-body {
   padding: 1rem;
+}
+
+.cart-medium{
+  background-color: white;
+  color: green;
+  border: transparent;
+}
+
+.sh{
+border-radius: 20px;
 }
 
 .cart-price {
@@ -293,7 +316,7 @@ img.medium {
 
 .form-control:focus {
   outline: none !important;
-  border: 1px solid blue;
+  border: 1px solid rgb(0, 0, 255);
   box-shadow: 0 0 10px #719ece;
 }
 
@@ -307,6 +330,10 @@ img.medium {
 #cart-site-header,
 #cart-site-footer {
   background: #fff;
+}
+
+.cart-subtotal{
+  color: #210651;
 }
 
 #cart-site-header {
@@ -367,8 +394,9 @@ img.medium {
   width: 80%;
   position: relative;
   border: solid;
-  border-width: thin;
-  border-color: #8f77db;
+  border-width: 5px;
+  border-radius: 20px;
+  border-color: #210651;
 }
 
 #cart h1 {
@@ -397,6 +425,7 @@ img.medium {
 
 .cart-product {
   border: 1px solid #eee;
+  border-style: none;
   margin: 50px 0;
   width: 100%;
   height: 195px;
@@ -598,17 +627,19 @@ img.medium {
   padding: 1rem;
   margin-left: 6rem;
   border: solid;
-  border-width: thin;
-  border-color: #8f77db;
+  border-width: 5px;
+  border-color: #210651;
+  border-radius: 20px;
 }
 
 .cart-right {
   float: right;
   padding: 1rem;
   border: solid;
-  border-width: thin;
-  border-color: #8f77db;
+  border-width: 5px;
+  border-color: #210651;
   margin-right: 3.5rem;
+  border-radius: 20px;
 }
 
 .cart-btn {
@@ -623,6 +654,7 @@ img.medium {
   padding: 16px 0;
   width: 290px;
   text-align: center;
+  border-radius: 20px;
 
   -webkit-transition: all 0.2s linear;
   -moz-transition: all 0.2s linear;
@@ -758,6 +790,12 @@ brightness(101%) contrast(101%);
   max-height: 40px;
 }
 
+.rmvb{
+background-color: transparent;
+border-style: none;
+color: white;
+}
+
 /* new navbar */
 .navbar{
    width: 100%;
@@ -765,6 +803,7 @@ brightness(101%) contrast(101%);
   display: flex;
   background-image: linear-gradient(to left, #210651, #8f77db);
   font:sugoe ui;
+  padding-bottom: 20px;
 }
 
 .navbar .left{
@@ -811,9 +850,9 @@ margin-left: 15px;
 
 }
 
-@media only screen and (max-width:800px){
+@media only screen and (max-width:80%){
   
-  .navbar .right button{
+  .navbar .right .button{
     display: flex;
   }
 

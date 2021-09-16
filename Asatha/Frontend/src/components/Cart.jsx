@@ -44,53 +44,16 @@ export default class Cart extends Component {
               <article className="cart-product">
                 <header>
                   <img className="cart-medium" src={productimg1} alt="" />
-                  <h3>Remove product</h3>
+                  <h3 className="sh"><button className="rmvb">Remove product</button></h3>
                 </header>
                 <div className="cart-content">
                   <h1>item one</h1>
                   <p>some description goes here</p>
                   <div title="You have selected this product"></div>
                 </div>
-                <footer className="cart-content">
-                  <span className="cart-qt-minus">-</span>
-                  <span className="cart-qt">2</span>
-                  <span className="cart-qt-plus">+</span>
-                  <h2 className="cart-price">price€</h2>
-                </footer>
+                
               </article>
-              <article className="cart-product">
-                <header>
-                  <img className="cart-medium" src={productimg1} alt="" />
-                  <h3>Remove product</h3>
-                </header>
-                <div className="cart-content">
-                  <h1>item 2</h1>
-                  <p>some description goes </p>
-                </div>
-                <footer className="cart-content">
-                  <span className="cart-qt-minus">-</span>
-                  <span className="cart-qt">1</span>
-                  <span className="cart-qt-plus">+</span>
-                  <h2 className="cart-price">price€</h2>
-                </footer>
-              </article>
-              <article className="cart-product">
-                <header>
-                  <img className="cart-medium" src={productimg1} alt="" />
-                  <h3>Remove product</h3>
-                </header>
-                <div className="cart-content">
-                  <h1>item 3</h1>
-                  <p>some description goes here</p>
-                </div>
-                <footer className="cart-content">
-                  <span className="cart-qt-minus">-</span>
-                  <span className="cart-qt">3</span>
-                  <span className="cart-qt-plus">+</span>
-                  <h2 className="cart-price">price€</h2>
-                </footer>
-              </article>
-            </section>
+            </section> 
           </div>
           <footer id="cart-site-footer">
             <div class="cart-container clearfix">
