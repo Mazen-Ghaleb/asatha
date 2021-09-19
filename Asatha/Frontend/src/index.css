@@ -29,6 +29,7 @@ h2 {
 h3 {
   color: #2e0672;
   font: Segoe UI;
+  font-size: 3rem;
 }
 
 body {
@@ -116,15 +117,15 @@ label {
 
 .row{
   display:inline;
+  justify-content: right;
 }
 
 .itemloop{
   display: flex;
   padding: 1rem;
-  border: #000;
-  border-style: dotted;
   align-items: center;
   justify-content: center;
+  background-color: #eee;
 }
 
 main {
@@ -204,7 +205,6 @@ header a {
 }
 
 img {
-  border-radius: 0.5rem;
   margin: 1 auto;
 }
 
@@ -804,6 +804,7 @@ color: white;
   background-image: linear-gradient(to left, #210651, #8f77db);
   font:sugoe ui;
   padding-bottom: 20px;
+  border-bottom: 5px black;
 }
 
 .navbar .left{
@@ -875,6 +876,100 @@ margin-left: 15px;
 }
 
 /*end of new navbar */
+
+/* card styling */
+
+.cardbody{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #2e0672;
+}
+
+.card.wrapper{
+  margin: 2rem;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  padding: 10px;
+}
+
+.card{
+  /* box-shadow: 0 0 10px 5px ; */
+  border-radius: 30px;
+  max-width: 28rem;
+  height: 50rem;
+  display: flex;
+  margin: 10px;
+  background-color: transparent;
+}
+
+.card.img{
+  max-width: 480p;
+  max-height: 480p;
+  object-fit: cover;
+  border-radius: 30px;
+  background-color: transparent;
+}
+
+.cardrows{
+  justify-content: right;
+}
+
+.cardbody{
+  margin: 1rem;
+  flex-shrink: 1;
+  flex-grow: 1;
+}
+
+.procat{
+  line-height: 1.4rem;
+  margin-bottom: 0.5rem;
+  font-size: smaller;
+}
+
+.proname{
+  line-height: 1.4rem;
+  margin-bottom: 0.5rem;
+  font-size: larger;
+}
+
+.prodesc{
+  line-height: 1.2rem;
+  padding: 2px;
+}
+
+.proprice{
+  font-size: 1.4rem;
+  margin-top: 01.6rem;
+}
+
+.probtn{
+  background-color: orange;
+  border-style: none;
+  color: inherit;
+  border-radius: 1rem;
+  padding: 7px;
+  font-weight: bold;
+  cursor: pointer;
+  position:right;
+  width: 40%;
+}
+
+.probtn:hover{
+  background-color: rgb(255, 200, 97);
+
+}
+
+@media screen and (max-width:800px){
+  .card.wrapper{
+    grid-template-columns: repeat(auto-fit,minmax(14rem,16rem));
+  }
+
+  
+}
+
+/*end of card styling */
+
 
 
 /************end of project page css************/
