@@ -8,6 +8,7 @@ function Navbar() {
   const [showLinks, setShowLinks] = useState(false);
   return (
     <div className="navbar">
+      {/* <div className="top"> */}
       <div className="left">
         <a>
           <a className="brand" href="/Home">
@@ -17,7 +18,7 @@ function Navbar() {
       </div>
 
       <div className="middle">
-        <input className="search" type="text" placeholder="Search..."></input>
+        <input className="search" type="text" placeholder="Search"></input>
         <button className="searchbtn">
           <img src={search} alt="" />
         </button>
@@ -38,6 +39,8 @@ function Navbar() {
           <img src={menu} alt="" />
         </button>
       </div>
+      {/* </div> */}
+      {/* <div className="bottom"></div> */}
     </div>
   );
 }

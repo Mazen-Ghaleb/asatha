@@ -11,7 +11,6 @@ import Forgotten from './components/Forgotten';
 import Cart from './components/Cart';
 import Home from './components/Home';
 import Product from './components/Product';
-import Basket from './images/add-to-basket.svg';
 import Navbar from './components/navbar';
 
 function App() {

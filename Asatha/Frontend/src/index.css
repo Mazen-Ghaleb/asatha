@@ -848,7 +848,11 @@ margin-left: 15px;
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
+}
 
+.navbar .middle .search{
+  text-align: center;
 }
 
 @media only screen and (max-width:80%){

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import bestsellers from './bestsellers';
-import prod1 from '../images/product-1.jpg';
 import Card from './Card';
 import underrated from './underrated';
 import recentpurchases from './recentpurchases';
