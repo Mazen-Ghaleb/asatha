@@ -973,9 +973,17 @@ margin-left: 15px;
 
 /*end of card styling */
 
-/*sign up page*/
+/*sign up & login page*/
+.bgorund{
+  background-color: #43484D;
+  padding: 5% 0;
+}
+
 .text-center{
+  background-color: white;
   margin: 0 32%;
+  border-radius: 5%;
+  
 }
 
 .fw-normal{
@@ -983,6 +991,7 @@ margin-left: 15px;
 }
 
 .submitButton{
+  width:35%;
   display: block;
   margin-left: 2%;
 }

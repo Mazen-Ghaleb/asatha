@@ -80,7 +80,7 @@ export default class SignUp extends Component {
       //     </form>
       //   </div>
       // </div>
-
+<div class="bgorund">
 <div class="text-center">
     
 <main class="form-signin">
@@ -129,6 +129,7 @@ export default class SignUp extends Component {
     </p>
   </form>
 </main>    
+</div>
 </div>
 
     );
