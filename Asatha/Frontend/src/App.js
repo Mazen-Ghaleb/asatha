@@ -5,6 +5,7 @@ import {
   Route,
   Redirect,
 } from 'react-router-dom';
+import { AuthProvider } from "./contexts/AuthContext";
 import Login from './components/Login';
 import SignUp from './components/Signup';
 import Forgotten from './components/Forgotten';
@@ -29,7 +30,7 @@ function App() {
 
   useEffect(() => {
     getData('customerInfo', customer, setCustomer);
-    getData('supplierInfo', supplier, setProduct);
+    getData('supplierInfo', supplier, setSupplier);
     getData('productInfo', product, setProduct);
     getData('orderInfo', order, setOrder);
     getData('orderItemInfo', orderItem, setOrderItem);
@@ -37,31 +38,33 @@ function App() {
 
   return (
     <Router>
-      <head>
-        <title>Asatha</title>
-      </head>
-      <header className="r1">
-        <Navbar></Navbar>
-      </header>
-      <Switch>
-        <Route exact path="/">
-          <Redirect to="/Home" />
-        </Route>
-        <Route path="/Home" component={() => <Home state={product} />} />
-        <Route path="/Login" component={() => <Login state={customer} />} />
-        <Route path="/SignUp" component={() => <SignUp state={customer} />} />
-        <Route
-          path="/Forgotten"
-          component={() => <Forgotten state={customer} />}
-        />
-        <Route
-          path="/Cart"
-          component={() => (
-            <Cart state={product} state2={order} state3={orderItem} />
-          )}
-        />
-        <Route path="/Product" component={() => <Product state={product} />} />
-      </Switch>
+      <AuthProvider>
+        <head>
+          <title>Asatha</title>
+        </head>
+        <header className="r1">
+          <Navbar></Navbar>
+        </header>
+        <Switch>
+          <Route exact path="/">
+            <Redirect to="/Home" />
+          </Route>
+          <Route path="/Home" component={() => <Home state={product} />} />
+          <Route path="/Login" component={Login} />
+          <Route path="/SignUp" component={SignUp} />
+          <Route
+            path="/Forgotten"
+            component={() => <Forgotten state={customer} />}
+          />
+          <Route
+            path="/Cart"
+            component={() => (
+              <Cart state={product} state2={order} state3={orderItem} />
+            )}
+          />
+          <Route path="/Product" component={() => <Product state={product} />} />
+        </Switch>
+      </AuthProvider>
     </Router>
   );
 }

@@ -1,8 +1,37 @@
-import React, { Component } from 'react';
+import React, {useRef, useState } from 'react';
+import { Alert } from "react-bootstrap"
+import { useAuth } from "../contexts/AuthContext";
+import { useHistory } from "react-router-dom";
 
-export default class SignUp extends Component {
-  render() {
-    return (
+export default function Signup() {
+  const emailRef = useRef()
+  const passwordRef = useRef()
+  //const passwordConfirmRef = useRef()
+  const { signup } = useAuth()
+  const [error, setError] = useState("")
+  const [loading, setLoading] = useState(false)
+  const history = useHistory()
+
+  async function handleSubmit(e) {
+    e.preventDefault()
+
+    /*if (passwordRef.current.value !== passwordConfirmRef.current.value) {
+      return setError("Passwords do not match")
+    }*/
+
+    try {
+      setError("")
+      setLoading(true)
+      await signup(emailRef.current.value, passwordRef.current.value)
+      history.push("/")
+    } catch {
+      setError("Failed to create an account")
+    }
+
+    setLoading(false)
+  }
+
+  return (
       // <div className="auth-wrapper">
       //   <div className="auth-inner">
       //     <form>
@@ -84,8 +113,9 @@ export default class SignUp extends Component {
 <div class="text-center">
     
 <main class="form-signin">
-  <form>
+  <form onSubmit={handleSubmit}>
     <h1 class="fw-normal">Sign Up</h1>
+    {error && <Alert variant="danger">{error}</Alert>}
 
     <div class="form-floating">
       <input type="text" class="form-control" id="floatingInput" placeholder="First Name"/> 
@@ -98,7 +128,7 @@ export default class SignUp extends Component {
     </div>
 
     <div class="form-floating">
-      <input type="email" class="form-control" id="floatingPassword" placeholder="name@example.com"/>
+      <input type="email" ref={emailRef} required class="form-control" id="floatingPassword" placeholder="name@example.com"/>
       <label for="floatingPassword">Email</label>
     </div>
 
@@ -108,22 +138,22 @@ export default class SignUp extends Component {
     </div>
 
     <div class="form-floating">
-      <input type="password" class="form-control" id="floatingPassword" placeholder="password"/>
-      <label for="floatingPassword">password</label>
+      <input type="password" ref={passwordRef} required class="form-control" id="floatingPassword" placeholder="password"/>
+      <label for="floatingPassword">Password</label>
     </div>
 
     <div class="form-floating">
       <input type="date" class="form-control" id="floatingPassword" placeholder="Birthdate"/>
-      <label for="floatingPassword">Birthdate</label>
+      <label for="floatingPassword">Birth date</label>
     </div>
 
     <div class="form-floating">
       <input type="text" class="form-control" id="floatingPassword" placeholder="gender"/>
-      <label for="floatingPassword">gender</label>
+      <label for="floatingPassword">Gender</label>
     </div>
 
     
-    <button class="submitButton btn btn-lg btn-primary Accountbtn" type="submit">Sign in</button>
+    <button disabled={loading} class="submitButton btn btn-lg btn-primary Accountbtn" type="submit">Sign Up</button>
     <p className="forgot-password text-right">
       Already registered <a href="/Login">Login ?</a>
     </p>
@@ -134,4 +164,3 @@ export default class SignUp extends Component {
 
     );
   }
-}
