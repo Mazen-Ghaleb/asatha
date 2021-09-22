@@ -1005,7 +1005,8 @@ margin-left: 15px;
   position:right;
   width: 40%;
   margin: 1rem;
-  
+  align-items: center;
+  justify-content: center;
 }
 
 .popimg{
