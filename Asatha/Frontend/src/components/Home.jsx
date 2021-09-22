@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Card from './Card';
-import recentpurchases from './recentpurchases';
 
 function getProductInfos(props) {
   if (props) {
