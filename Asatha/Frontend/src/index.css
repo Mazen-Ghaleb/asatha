@@ -263,6 +263,22 @@ border-radius: 20px;
   z-index: 1;
 }
 
+.crtbtns{
+display: flex;
+margin: 10px;
+align-items: center;
+justify-content: space-evenly;
+}
+
+.abtn{
+  margin: 2px;
+  background-color: #53b5aa ;
+  border-style: none;
+  border-radius: 5px;
+  width: 45px;
+  color: white;
+}
+
 .dropdown-content a {
   color: black;
   padding: 12px 16px;
