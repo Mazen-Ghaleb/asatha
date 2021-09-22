@@ -15,22 +15,32 @@ import Product from './components/Product';
 import Navbar from './components/navbar';
 
 function App() {
-  const [customer, setCustomer] = useState([]);
-  const [supplier, setSupplier] = useState([]);
   const [product, setProduct] = useState([]);
+  const [productBestSeller, setProductBestSeller] = useState([]);
+  const [productUnderratedProducts, setUnderratedProducts] = useState([]);
+  const [productRecentPurchases, setRecentPurchases] = useState([]);
   const [order, setOrder] = useState([]);
   const [orderItem, setOrderItem] = useState([]);
 
   async function getData(Info, InfoType, InfoFunction) {
     const response = await fetch('/api/' + Info);
     const data = await response.json();
-
+    console.log(data);
     InfoFunction(data);
   }
 
   useEffect(() => {
-    getData('customerInfo', customer, setCustomer);
-    getData('supplierInfo', supplier, setSupplier);
+    getData('productInfo/BestSellers', productBestSeller, setProductBestSeller);
+    getData(
+      'productInfo/UnderratedProducts',
+      productUnderratedProducts,
+      setUnderratedProducts
+    );
+    getData(
+      'productInfo/RecentPurchases',
+      productRecentPurchases,
+      setRecentPurchases
+    );
     getData('productInfo', product, setProduct);
     getData('orderInfo', order, setOrder);
     getData('orderItemInfo', orderItem, setOrderItem);
@@ -49,13 +59,19 @@ function App() {
           <Route exact path="/">
             <Redirect to="/Home" />
           </Route>
-          <Route path="/Home" component={() => <Home state={product} />} />
+          <Route
+            path="/Home"
+            component={() => (
+              <Home
+                state2={productBestSeller}
+                state3={productUnderratedProducts}
+                state4={productRecentPurchases}
+              />
+            )}
+          />
           <Route path="/Login" component={Login} />
           <Route path="/SignUp" component={SignUp} />
-          <Route
-            path="/Forgotten"
-            component={() => <Forgotten state={customer} />}
-          />
+          <Route path="/Forgotten" component={() => <Forgotten />} />
           <Route
             path="/Cart"
             component={() => (

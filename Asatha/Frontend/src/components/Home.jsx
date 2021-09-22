@@ -1,12 +1,10 @@
 import React, { Component } from 'react';
-import bestsellers from './bestsellers';
 import Card from './Card';
-import underrated from './underrated';
 import recentpurchases from './recentpurchases';
 
 function getProductInfos(props) {
   if (props) {
-    if (props.state && props.state.product) {
+    if (props.state && props.state2.product) {
       // use JSON.Parse to print single attribute without quotations.
       return JSON.stringify(props.state.product, null, 2);
     }
@@ -27,65 +25,68 @@ export default class Home extends Component {
             <h3>Best Sellers</h3>
             <div class="row">
               <div className="itemloop">
-                {bestsellers.map((item, index) => {
-                  return (
-                    <div classname="bestseller" key={index}>
-                      <Card
-                        img={item.img}
-                        category={item.category}
-                        title={item.title}
-                        description={item.description}
-                        price={item.price}
-                      />
-                      {/* old loop content         */}
-                      {/* <a href="/Product">
-                      <img className="medium" src={item.img} alt="" />
-                    </a>
-                    <a href="/Product">
-                      <h2 className="bstitle">{item.title}</h2>
-                    </a>
-                    <p className="bsdescription">{item.description}</p>
-                    <div className="bsprice">{item.price}</div> */}
-                    </div>
-                  );
-                })}
+                {this.props.state2.product ? (
+                  this.props.state2.product.slice(0, 5).map((item, index) => {
+                    return (
+                      <div classname="bestseller" key={index}>
+                        <Card
+                          img={item.MainImage}
+                          category={item.SupplierID}
+                          title={item.ProductName}
+                          description={item.Description}
+                          price={item.UnitPrice}
+                        />
+                      </div>
+                    );
+                  })
+                ) : (
+                  <div></div>
+                )}
               </div>
             </div>
             <h3>Underrated Products</h3>
             <div class="row">
               <div className="itemloop">
-                {underrated.map((item, index) => {
-                  return (
-                    <div classname="cardrows" key={index}>
-                      <Card
-                        img={item.img}
-                        category={item.category}
-                        title={item.title}
-                        description={item.description}
-                        price={item.price}
-                      />
-                    </div>
-                  );
-                })}
+                {this.props.state3.product ? (
+                  this.props.state3.product.slice(0, 5).map((item, index) => {
+                    return (
+                      <div classname="cardrows" key={index}>
+                        <Card
+                          img={item.MainImage}
+                          category={item.SupplierID}
+                          title={item.ProductName}
+                          description={item.Description}
+                          price={item.UnitPrice}
+                        />
+                      </div>
+                    );
+                  })
+                ) : (
+                  <div></div>
+                )}
               </div>
             </div>
 
             <h3>Recent Purchases</h3>
             <div class="row">
               <div className="itemloop">
-                {recentpurchases.map((item, index) => {
-                  return (
-                    <div classname="bestseller" key={index}>
-                      <Card
-                        img={item.img}
-                        category={item.category}
-                        title={item.title}
-                        description={item.description}
-                        price={item.price}
-                      />
-                    </div>
-                  );
-                })}
+                {this.props.state4.product ? (
+                  this.props.state4.product.slice(0, 5).map((item, index) => {
+                    return (
+                      <div classname="bestseller" key={index}>
+                        <Card
+                          img={item.MainImage}
+                          category={item.SupplierID}
+                          title={item.ProductName}
+                          description={item.Description}
+                          price={item.UnitPrice}
+                        />
+                      </div>
+                    );
+                  })
+                ) : (
+                  <div></div>
+                )}
               </div>
             </div>
           </main>

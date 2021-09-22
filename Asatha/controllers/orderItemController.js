@@ -13,12 +13,9 @@ const get_orderItemInfo = (req, res) => {
         orderItemInfo.orderItem.push({
           OrderItemId: rows[i].OrderItemID,
           ProductID: rows[i].ProductID,
-          UnitPrice: rows[i].UnitPrice,
           Quantity: rows[i].Quantity,
           Discount: rows[i].Discount,
           MainImage: rows[i].MainImage,
-          SImage1: rows[i].SImage1,
-          SImage2: rows[i].SImage2,
         });
       }
       res.json(orderItemInfo);
