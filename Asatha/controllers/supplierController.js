@@ -5,7 +5,7 @@ const get_supplierInfo = (req, res) => {
   var supplierInfo = {
     supplier: [],
   };
-  connection.query('SELECT * FROM `supplier`', function (err, rows) {
+  connection.query('SELECT * FROM `Supplier`', function (err, rows) {
     if (err) {
       throw err;
     } else {

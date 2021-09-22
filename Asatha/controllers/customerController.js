@@ -5,7 +5,7 @@ const get_customerInfo = (req, res) => {
   var customerInfo = {
     customer: [],
   };
-  connection.query('SELECT * FROM `customer`', function (err, rows) {
+  connection.query('SELECT * FROM `Customer`', function (err, rows) {
     if (err) {
       throw err;
     } else {
@@ -37,7 +37,7 @@ const post_customerInfo = (request, response) => {
         [post.id, post.FName, post.LName, post.Birthday, post.Gender],
       ];
       connection.query(
-        'INSERT INTO customer (`CustomerID`, `CustomerFName`, `CustomerLName`, `CustomerBirthday`, `CustomerGender`) VALUES ?',
+        'INSERT INTO Customer (`CustomerID`, `CustomerFName`, `CustomerLName`, `CustomerBirthday`, `CustomerGender`) VALUES ?',
         [values],
         function (err, result) {
           if (err) throw err;

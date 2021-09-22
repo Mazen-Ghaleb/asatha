@@ -18,19 +18,27 @@ export default class Home extends Component {
     return (
       <div>
         <body>
-          {/* <div>
-            <pre>{getProductInfos(this.props)}</pre>
-          </div> */}
+          {/* {
+            <div>
+              <pre>{getProductInfos(this.props)}</pre>
+            </div>
+          } */}
           <main>
             <h3>Best Sellers</h3>
             <div class="row">
               <div className="itemloop">
-                {bestsellers.map((item,index)=>{
-                  return(
-                  <div classname="bestseller" key={index}>
-                    <Card img={item.img} category={item.category} title={item.title} description={item.description} price={item.price} />  
-                    {/* old loop content         */}
-                    {/* <a href="/Product">
+                {bestsellers.map((item, index) => {
+                  return (
+                    <div classname="bestseller" key={index}>
+                      <Card
+                        img={item.img}
+                        category={item.category}
+                        title={item.title}
+                        description={item.description}
+                        price={item.price}
+                      />
+                      {/* old loop content         */}
+                      {/* <a href="/Product">
                       <img className="medium" src={item.img} alt="" />
                     </a>
                     <a href="/Product">
@@ -38,37 +46,48 @@ export default class Home extends Component {
                     </a>
                     <p className="bsdescription">{item.description}</p>
                     <div className="bsprice">{item.price}</div> */}
-                  </div>
-                  )
+                    </div>
+                  );
                 })}
-              </div>   
+              </div>
             </div>
             <h3>Underrated Products</h3>
             <div class="row">
               <div className="itemloop">
-                {underrated.map((item,index)=>{
-                  return(
-                  <div classname="cardrows" key={index}>
-                    <Card img={item.img} category={item.category} title={item.title} description={item.description} price={item.price} />  
-                  </div>
-                  )
+                {underrated.map((item, index) => {
+                  return (
+                    <div classname="cardrows" key={index}>
+                      <Card
+                        img={item.img}
+                        category={item.category}
+                        title={item.title}
+                        description={item.description}
+                        price={item.price}
+                      />
+                    </div>
+                  );
                 })}
-              </div>   
+              </div>
             </div>
 
             <h3>Recent Purchases</h3>
             <div class="row">
               <div className="itemloop">
-                {recentpurchases.map((item,index)=>{
-                  return(
-                  <div classname="bestseller" key={index}>
-                    <Card img={item.img} category={item.category} title={item.title} description={item.description} price={item.price} />  
-                  </div>
-                  )
+                {recentpurchases.map((item, index) => {
+                  return (
+                    <div classname="bestseller" key={index}>
+                      <Card
+                        img={item.img}
+                        category={item.category}
+                        title={item.title}
+                        description={item.description}
+                        price={item.price}
+                      />
+                    </div>
+                  );
                 })}
-              </div>   
+              </div>
             </div>
-
           </main>
           <footer className="r1 center"> placeholder text </footer>
         </body>

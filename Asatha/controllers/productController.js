@@ -5,7 +5,7 @@ const get_productInfo = (req, res) => {
   var productInfo = {
     product: [],
   };
-  connection.query('SELECT * FROM `product`', function (err, rows) {
+  connection.query('SELECT * FROM `Product`', function (err, rows) {
     if (err) {
       throw err;
     } else {
@@ -17,6 +17,9 @@ const get_productInfo = (req, res) => {
           UnitPrice: rows[i].UnitPrice,
           Discount: rows[i].Discount,
           Description: rows[i].Description,
+          MainImage: rows[i].MainImage,
+          SImage1: rows[i].SImage1,
+          SImage2: rows[i].SImage2,
         });
       }
       res.json(productInfo);

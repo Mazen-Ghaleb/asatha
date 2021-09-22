@@ -5,7 +5,7 @@ const get_orderInfo = (req, res) => {
   var orderInfo = {
     order: [],
   };
-  connection.query('SELECT * FROM `order`', function (err, rows) {
+  connection.query('SELECT * FROM `Order`', function (err, rows) {
     if (err) {
       throw err;
     } else {
