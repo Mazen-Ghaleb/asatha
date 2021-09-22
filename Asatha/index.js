@@ -2,12 +2,12 @@
 const express = require('express');
 const cors = require('cors');
 const morgan = require('morgan');
-// const connection = require('./dbConnection');
-// const customerRouter = require('./routes/customerRouter');
-// const orderRouter = require('./routes/orderRouter');
-// const orderItemRouter = require('./routes/orderItemRouter');
-// const productRouter = require('./routes/productRouter');
-// const supplierRouter = require('./routes/supplierRouter');
+const connection = require('./dbConnection');
+const customerRouter = require('./routes/customerRouter');
+const orderRouter = require('./routes/orderRouter');
+const orderItemRouter = require('./routes/orderItemRouter');
+const productRouter = require('./routes/productRouter');
+const supplierRouter = require('./routes/supplierRouter');
 
 // Creating express App
 const app = express();
@@ -21,23 +21,23 @@ app.use(express.urlencoded({ extended: true }));
 app.use(morgan('dev'));
 app.use(cors());
 
-// connection.connect((err) => {
-//   if (err) {
-//     throw err;
-//   } else {
-//     // To use the customer route
-//     app.use('/api/customerInfo', customerRouter);
+connection.connect((err) => {
+  if (err) {
+    throw err;
+  } else {
+    // To use the customer route
+    app.use('/api/customerInfo', customerRouter);
 
-//     // To use the order route
-//     app.use('/api/orderInfo', orderRouter);
+    // To use the order route
+    app.use('/api/orderInfo', orderRouter);
 
-//     // To use the order item api route
-//     app.use('/api/orderItemInfo', orderItemRouter);
+    // To use the order item api route
+    app.use('/api/orderItemInfo', orderItemRouter);
 
-//     // To use the product api route
-//     app.use('/api/productInfo', productRouter);
+    // To use the product api route
+    app.use('/api/productInfo', productRouter);
 
-//     // To use the supplier api route
-//     app.use('/api/supplierInfo', supplierRouter);
-//   }
-// });
+    // To use the supplier api route
+    app.use('/api/supplierInfo', supplierRouter);
+  }
+});

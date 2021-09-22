@@ -5,7 +5,7 @@ import {
   Route,
   Redirect,
 } from 'react-router-dom';
-import { AuthProvider } from "./contexts/AuthContext";
+import { AuthProvider } from './contexts/AuthContext';
 import Login from './components/Login';
 import SignUp from './components/Signup';
 import Forgotten from './components/Forgotten';
@@ -62,7 +62,10 @@ function App() {
               <Cart state={product} state2={order} state3={orderItem} />
             )}
           />
-          <Route path="/Product" component={() => <Product state={product} />} />
+          <Route
+            path="/Product"
+            component={() => <Product state={product} />}
+          />
         </Switch>
       </AuthProvider>
     </Router>
